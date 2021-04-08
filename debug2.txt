@@ -1,59 +1,59 @@
-Market Cap (intraday) : 2.12T
-Enterprise Value : 2.15T
-Trailing P/E : 34.
-Forward P/E : 26.
+Market Cap (intraday) : 240.17B
+Enterprise Value : 314.07B
+Trailing P/E : N/A
+Forward P/E : 14.
 PEG Ratio (5 yr expected) : 1.
-Price/Sales (ttm): 7.
-Price/Book (mrq): 32.
-Enterprise Value/Revenue : 7.
-Enterprise Value/EBITDA : 25.
+Price/Sales (ttm): 1.
+Price/Book (mrq): 1.
+Enterprise Value/Revenue : 1.
+Enterprise Value/EBITDA : 33.
 Beta (5Y Monthly) : 1.
-52-Week Change : 89.27%
-S&P500 52-Week Change : 48.29%
-52 Week High : 145.
-52 Week Low : 65.
-50-Day Moving Average : 123.
-200-Day Moving Average : 123.
-Avg Vol (3 month) : 108.1M
-Avg Vol (10 day) : 89.63M
-Shares Outstanding : 16.79B
-Float : 16.77B
-% Held by Insiders : 0.08%
-% Held by Institutions : 59.79%
-Shares Short (Mar 14, 2021) : 107.01M
-Short Ratio (Mar 14, 2021) : 0.
-Short % of Float (Mar 14, 2021) : 0.64%
-Short % of Shares Outstanding (Mar 14, 2021) : 0.64%
-Shares Short (prior month Feb 11, 2021) : 88.33M
-Forward Annual Dividend Rate : 0.
-Forward Annual Dividend Yield : 0.65%
-Trailing Annual Dividend Rate : 0.
-Trailing Annual Dividend Yield : 0.64%
-5 Year Average Dividend Yield : 1.
-Payout Ratio : 21.77%
-Dividend Date : Feb 10, 
-Ex-Dividend Date : Feb 04, 
-Last Split Factor : 4:
-Last Split Date : Aug 30, 
-Fiscal Year Ends : Sep 25, 
-Most Recent Quarter (mrq): Dec 25, 
-Profit Margin : 21.74%
-Operating Margin (ttm): 25.25%
-Return on Assets (ttm): 13.36%
-Return on Equity (ttm): 82.09%
-Revenue (ttm): 294.14B
-Revenue Per Share (ttm): 17.
-Quarterly Revenue Growth (yoy): 21.40%
-Gross Profit (ttm): 104.96B
-EBITDA : 85.16B
-Net Income Avi to Common (ttm): 63.93B
-Diluted EPS (ttm): 3.
-Quarterly Earnings Growth (yoy): 29.30%
-Total Cash (mrq): 76.83B
-Total Cash Per Share (mrq): 4.
-Total Debt (mrq): 112.04B
-Total Debt/Equity (mrq): 169.
-Current Ratio (mrq): 1.
-Book Value Per Share (mrq): 3.
-Operating Cash Flow (ttm): 88.92B
-Levered Free Cash Flow (ttm): 66.89B
+52-Week Change : 28.48%
+S&P500 52-Week Change : 48.14%
+52 Week High : 62.
+52 Week Low : 31.
+50-Day Moving Average : 56.
+200-Day Moving Average : 44.
+Avg Vol (3 month) : 30.9M
+Avg Vol (10 day) : 21.75M
+Shares Outstanding : 4.23B
+Float : 4.22B
+% Held by Insiders : 0.12%
+% Held by Institutions : 52.55%
+Shares Short (Mar 14, 2021) : 64.29M
+Short Ratio (Mar 14, 2021) : 1.
+Short % of Float (Mar 14, 2021) : 1.52%
+Short % of Shares Outstanding (Mar 14, 2021) : 1.52%
+Shares Short (prior month Feb 11, 2021) : 47.52M
+Forward Annual Dividend Rate : 3.
+Forward Annual Dividend Yield : 6.18%
+Trailing Annual Dividend Rate : 3.
+Trailing Annual Dividend Yield : 6.18%
+5 Year Average Dividend Yield : 4.
+Payout Ratio : N/A
+Dividend Date : Mar 09, 
+Ex-Dividend Date : Feb 08, 
+Last Split Factor : 2:
+Last Split Date : Jul 18, 
+Fiscal Year Ends : Dec 30, 
+Most Recent Quarter (mrq): Dec 30, 
+Profit Margin : -12.48%
+Operating Margin (ttm): -5.70%
+Return on Assets (ttm): -1.84%
+Return on Equity (ttm): -12.81%
+Revenue (ttm): 179.78B
+Revenue Per Share (ttm): 42.
+Quarterly Revenue Growth (yoy): -25.80%
+Gross Profit (ttm): 57.16B
+EBITDA : 9.26B
+Net Income Avi to Common (ttm): -22.44B
+Diluted EPS (ttm): -5.
+Quarterly Earnings Growth (yoy): N/A
+Total Cash (mrq): 4.36B
+Total Cash Per Share (mrq): 1.
+Total Debt (mrq): 72.94B
+Total Debt/Equity (mrq): 44.
+Current Ratio (mrq): 0.
+Book Value Per Share (mrq): 37.
+Operating Cash Flow (ttm): 14.67B
+Levered Free Cash Flow (ttm): -5.25B
