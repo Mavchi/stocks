@@ -26,25 +26,29 @@ class DB:
 		def loadSymbols(self):
 				companies = []
 
-				with open('raw/nyseMedium.csv') as file:
+				with open('raw/nyse.csv') as file:
 					reader = csv.reader(file, delimiter=',')
 					columnNames = next(reader)
 					failed = []
 
 					for data in reader:
 						company = {}
-						company = {
-							'symbol': data[0],
-							'name': data[1],
-							'country': data[6],
-							'ipoYear': data[7],
-							'sector': data[9],
-							'industry': data[10],
-							'marketCap': float(data[5]),
-							'lastPrice': float(data[2].lstrip('$')),
-							'category': 'maybe',
-							'lastUpdated': 0
-						}
+						try:
+							company = {
+								'symbol': data[0],
+								'name': data[1],
+								'country': data[6],
+								'ipoYear': data[7],
+								'sector': data[9],
+								'industry': data[10],
+								'marketCap': float(data[5]),
+								'lastPrice': float(data[2].lstrip('$')),
+								'category': 'maybe',
+								'lastUpdated': 0
+							}
+						except:
+							print(f'{data[0]} has no stock price')
+							continue
 						companies.append(company)
 				
 				failed = []
@@ -209,11 +213,10 @@ class DB:
 
 			with requests.get(baseUrl, headers) as response:
 				response.raise_for_status()
-				time.sleep(randint(7, 13))
+				time.sleep(randint(3, 6))
 
 				parse(company, response)
-				company['sharesOurstanding'] = int(
-												company['marketCap'] / company['lastPrice'])
+				company['sharesOurstanding'] = int(company['marketCap'] / company['lastPrice'])
 				company['cPE'] = (company['lastPrice']/company['dEPS'])
 				if company['dEPS'] < 0 and company['lastPrice'] < 0:
 					company['cPE'] *= -1

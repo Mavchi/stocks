@@ -206,5 +206,6 @@ if __name__ == '__main__':
 
 """
 Bugs:
+-Profit Margin 	1,517.89% fails
 
 """
