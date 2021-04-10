@@ -1,0 +1,11 @@
+.container {
+    max-width: 125rem;
+    margin: auto;
+}
+
+.btn {
+    border: none;
+    background-color: var(--color-grey-dark-1);
+    color: var(--color-grey-light-3);
+    padding: 0.5rem 1rem;
+}

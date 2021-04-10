@@ -26,7 +26,7 @@ class DB:
 		def loadSymbols(self):
 				companies = []
 
-				with open('raw/nasdaq.csv') as file:
+				with open('raw/nyse.csv') as file:
 					reader = csv.reader(file, delimiter=',')
 					columnNames = next(reader)
 					failed = []

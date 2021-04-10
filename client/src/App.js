@@ -1,31 +1,35 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { initializeStocks } from './reducers/stockReducer';
+import { initializeUser } from './reducers/userReducer'
+import { Switch, Route } from 'react-router-dom'
 
-import Main from './pages/Main'
-import Stock from './components/Stock/Stock'
+import Main from './pages/Main/Main'
+import LogIn from './pages/LogIn/LogIn'
+import Header from './components/Header/Header'
 
 const App = () => {
   const dispatch = useDispatch();
-  const longs = useSelector((state) => state.stocks.long);
-  const short = useSelector((state) => state.stocks.short);
+  const user = useSelector((state) => state.user)
 
   useEffect(() => {
-    dispatch(initializeStocks());
+    dispatch(initializeUser());
   }, [dispatch]);
 
-  console.log(longs);
-
-  if(!longs) {
-    return <div>Loading...</div>
+  if (!user) {
+    return <LogIn />
   }
 
   return (
     <React.Fragment>
-        <h1>Stocks</h1>
-        {longs.map((stock) => 
-            <Stock key={stock.id} stock={stock} />
-        )}
+        <Header />
+
+        <Switch>
+          <Route path="/">
+            <Main />
+          </Route>
+        </Switch>
+
+        
     </React.Fragment>
   )
 };
