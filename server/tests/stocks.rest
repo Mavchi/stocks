@@ -1,0 +1,4 @@
+###
+GET http://localhost:3001/api/stocks
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsZWtzaS5raGxlYm5pa292QGdtYWlsLmNvbSIsImlkIjoiNjA3MTYyZWUyOGM5Nzk1ODdkOGU4NjFmIiwiaWF0IjoxNjE4MDQzNjk5fQ.rINSQkpYqFZHfEtEL3XyRstWymOtGznyPbZouGBlhRg
+###

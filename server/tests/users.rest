@@ -1,0 +1,21 @@
+
+###
+get http://localhost:3001/api/users
+###
+post http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "aleksi.khlebnikov@gmail.com",
+    "name": "Aleksi",
+    "password": "ex6wQHRS9sAzdMfM"
+}
+###
+post http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "aleksi.khlebnikov@gmail.com",
+    "password": "ex6wQHRS9sAzdMfM"
+}
+###

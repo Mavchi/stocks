@@ -26,7 +26,7 @@ class DB:
 		def loadSymbols(self):
 				companies = []
 
-				with open('raw/nyse.csv') as file:
+				with open('raw/nasdaq.csv') as file:
 					reader = csv.reader(file, delimiter=',')
 					columnNames = next(reader)
 					failed = []
@@ -74,13 +74,13 @@ class DB:
 						last_updated = time.localtime(companies[i]['lastUpdated'])
 						print(f'{companies[i]["symbol"]} in db, last updated {last_updated.tm_mday}/{last_updated.tm_mon}/{last_updated.tm_year}')
 
-
+				"""
 				i = 500
 				while len(failed) > 0:
 					i -= 1
 					if i < 0:
 						break
-					indexRemoved = self.randint(0, len(failed)-1)
+					indexRemoved = randint(0, len(failed)-1)
 					try:
 						print('trying to download', failed[indexRemoved]['symbol'])
 						self.getStockQuote(failed[indexRemoved])
@@ -93,6 +93,7 @@ class DB:
 					
 					companies.append(copy.deepcopy(failed[indexRemoved]))
 					del failed[indexRemoved]
+				"""
 
 		def getStockQuote(self, company):
 			def parse(company, html: str):
@@ -100,6 +101,7 @@ class DB:
 				soup = BeautifulSoup(html.content, 'html.parser')
 				#label = soup.select('table tbody tr td span')
 				data = soup.select('table tbody tr td')
+				#print(data)
 				for i in range(0, len(data), 2):
 					if('Trailing P/E' in data[i].get_text().rstrip(numbers)):
 						try:
@@ -212,7 +214,7 @@ class DB:
 			}
 
 			with requests.get(baseUrl, headers) as response:
-				response.raise_for_status()
+				#response.raise_for_status()
 				time.sleep(randint(3, 6))
 
 				parse(company, response)

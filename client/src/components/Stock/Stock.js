@@ -9,8 +9,8 @@ const Stock = ({ stock }) => {
           <table style={{ width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
-                <th className={section__title} colspan='4'>{`${stock.name}: (${stock.symbol}, ${stock.country}, ${stock.ipoYear})`}</th>
-                <th colspan='2'>Last Updated: {new Date(stock.lastUpdated).toLocaleDateStrin()}</th>
+                <th className={section__title} colSpan='4'>{`${stock.name}: (${stock.symbol}, ${stock.country}, ${stock.ipoYear})`}</th>
+                <th colSpan='2'>Last Updated: {new Date(stock.lastUpdated).toLocaleDateString()}</th>
               </tr>
             </thead>
             <tbody>
@@ -18,7 +18,7 @@ const Stock = ({ stock }) => {
                 <td className={section__itemLabel}>Sector</td>
                 <td className={section__itemData}>{stock.sector}</td>
                 <td className={section__itemLabel}>Industry</td>
-                <td className={section__itemData} colspan='3'>
+                <td className={section__itemData} colSpan='3'>
                   {stock.industry}
                 </td>
               </tr>
@@ -37,7 +37,7 @@ const Stock = ({ stock }) => {
           <table style={{ width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
-                <th className={section__title} colspan='4'>
+                <th className={section__title} colSpan='4'>
                   Financials
                 </th>
               </tr>
@@ -68,7 +68,7 @@ const Stock = ({ stock }) => {
           <table style={{ width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
-                <th className={section__title} colspan='4'>
+                <th className={section__title} colSpan='4'>
                   Statistics
                 </th>
               </tr>
