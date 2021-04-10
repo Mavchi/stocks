@@ -14,6 +14,7 @@ stocksRouter.get('/', async (request, response) => {
     }
 
     const stocks = (await Stock.find({})).map((stock) => stock.toJSON());
+    /*
     const filtered = {
         short: [],
         long: [],
@@ -35,8 +36,8 @@ stocksRouter.get('/', async (request, response) => {
     if (config.NODE_ENV = 'development') {
         console.log(`Returned longs: ${filtered.long.length}, shorts: ${filtered.short.length}`)
     }
-
-    response.json(filtered)
+    */
+    response.json(stocks);
 })
 
 module.exports = stocksRouter

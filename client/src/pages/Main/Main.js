@@ -1,27 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { initializeStocks } from '../../reducers/stockReducer';
 import Stock from '../../components/Stock/Stock';
 
 const Main = () => {
   const dispatch = useDispatch();
-  const longs = useSelector((state) => state.stocks.long);
-  const shorts = useSelector((state) => state.stocks.short);
+  const stocks = useSelector((state) => state.stocks);
+  const [filteredStocks, setFilteredStocks] = useState([])
 
   useEffect(() => {
     dispatch(initializeStocks());
   }, [dispatch]);
 
-  if(!(longs || shorts)) {
-      return <div>...Loading</div>
+  if (!stocks) {
+    return <div>...Loading</div>;
   }
 
-  console.log(longs);
+  console.log(stocks);
 
   return (
     <React.Fragment>
       <h1>Stocks</h1>
-      {longs.map((stock) => (
+      {filteredStocks.map((stock) => (
         <Stock key={stock.id} stock={stock} />
       ))}
     </React.Fragment>
@@ -29,3 +29,21 @@ const Main = () => {
 };
 
 export default Main;
+
+/*
+name/symbol
+CPE: min / max
+institutions: min / max
+shortRatio: min / max
+tAnnualDividendYield: min / max
+profitMargin: min / max
+qRevenueGrowth: min / max
+qEarningsGrowth: min / max
+peter: min / max
+
+
+
+(country)
+(sector/industry)
+(market cap : min / max)
+*/
