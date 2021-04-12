@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { initializeStocks } from '../../reducers/stockReducer';
-import Stock from '../../components/Stock/Stock';
+import Search from '../../components/Search/Search'
 
 const Main = () => {
   const dispatch = useDispatch();
   const stocks = useSelector((state) => state.stocks);
-  const [filteredStocks, setFilteredStocks] = useState([])
 
   useEffect(() => {
     dispatch(initializeStocks());
@@ -21,9 +20,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <h1>Stocks</h1>
-      {filteredStocks.map((stock) => (
-        <Stock key={stock.id} stock={stock} />
-      ))}
+      <Search stocks={stocks} />
     </React.Fragment>
   );
 };
