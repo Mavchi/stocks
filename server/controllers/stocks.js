@@ -22,7 +22,10 @@ stocksRouter.get('/', async (request, response) => {
           !stock.name.toLowerCase().includes('fund') &&
           !stock.name.toLowerCase().includes('trust') &&
           stock.industry !== 'Real Estate Investment Trusts' &&
-          stock.industry !== 'Investment Managers'
+          stock.industry !== 'Investment Managers' &&
+          stock.industry !== 'Investment Bankers/Brokers/Service' &&
+          stock.industry !== 'Major Banks' &&
+          stock.industry !== 'Savings Institutions'
         ) {
           filtered.push(stock);
         }
