@@ -14,30 +14,25 @@ stocksRouter.get('/', async (request, response) => {
     }
 
     const stocks = (await Stock.find({})).map((stock) => stock.toJSON());
-    /*
-    const filtered = {
-        short: [],
-        long: [],
-    }
+    
+    const filtered = []
 
     stocks.forEach((stock) => {
-        if (stock.shortRatio >= 6 ) {
-            filtered.short.push(stock)
-        }
-        if ( (stock.cPE > 0 && stock.cPE <= 25) 
-            && (stock.qRevenueGrowth > 0) 
-            && (stock.peter >= 1)
-            && (stock.industry !== 'Investment Managers')
+        if (
+          !stock.name.toLowerCase().includes('fund') &&
+          !stock.name.toLowerCase().includes('trust') &&
+          stock.industry !== 'Real Estate Investment Trusts' &&
+          stock.industry !== 'Investment Managers'
         ) {
-            filtered.long.push(stock)
+          filtered.push(stock);
         }
     })
 
     if (config.NODE_ENV = 'development') {
-        console.log(`Returned longs: ${filtered.long.length}, shorts: ${filtered.short.length}`)
+        console.log(`Returned longs: ${filtered.length}}`)
     }
-    */
-    response.json(stocks);
+
+    response.json(filtered);
 })
 
 module.exports = stocksRouter
